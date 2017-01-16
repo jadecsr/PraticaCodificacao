@@ -70,7 +70,7 @@ int main () {
 			}					
 		}
 		
-	if (aux == 0) {
+/*	if (aux == 0) {
 		printf("\nCLEAR");
 	} else {
 		for (i = 0; i < aux; i++) {
@@ -83,7 +83,7 @@ int main () {
 				printf("3 ");
 			printf("\n");
 		}
-	}
+	}*/
 
 	return 0;
 }
