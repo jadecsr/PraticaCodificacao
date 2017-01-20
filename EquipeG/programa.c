@@ -5,13 +5,13 @@
 
 struct voo
 {
-    char data[3];
-    char hora[5];
-    char operacao[3];
-    char matricula[7];
-    char proced[4];
-    char destino[4];
-    char tipo[4];
+    char * data;
+    char * hora;
+    char * operacao;
+    char * matricula;
+    char * proced;
+    char * destino;
+    char * tipo;
 };
 
 void imprimeListaVoos(struct voo voos_arr[], int n){
@@ -73,8 +73,38 @@ int main(){
 
         // linha sem espacos
         line = removeSpaces(line);
+        
+        char * data;
+        char * hora;
+        char * operacao;
+        char * matricula;
+        char * proced;
+        char * destino;
+        char * tipo;
+        
 
-        voos_arr[voo_idx] = ( const struct voo){
+        data = strtok (line,", \n");
+        printf("data -> %s", data);
+
+        hora = strtok (NULL,", \n");
+        printf(" hora -> %s", hora);
+
+        operacao = strtok (NULL,", \n");
+        printf(" operacao -> %s", operacao);
+
+        matricula = strtok (NULL,", \n");
+        printf(" matricula -> %s", matricula);
+        
+        proced = strtok (NULL,", \n");
+        printf(" hora -> %s", hora);
+
+        destino = strtok (NULL,", \n");
+        printf(" destino -> %s", destino);
+
+        tipo = strtok (NULL,", \n");
+        printf(" tipo -> %s\n", tipo);
+
+        /*voos_arr[voo_idx] = ( const struct voo){
             .data = strtok (line," "),
             .hora = strtok (NULL," "),
             .operacao = strtok (NULL," "),
@@ -82,12 +112,12 @@ int main(){
             .proced = strtok (NULL," "),
             .destino = strtok (NULL," "),
             .tipo = strtok (NULL," ")           
-        };
+        };*/
 
         voo_idx++;
     }
 
-    imprimeListaVoos(voos_arr, 217);
+    printf("%d\n",voo_idx);
 
     fclose(fp);
     if (line)
