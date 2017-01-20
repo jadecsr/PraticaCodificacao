@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class IES {
 
     public static void main(String[] args) {
+    
+    //inkedList<voo> voos = new LinkedList<voo>();
         Scanner leitor = new Scanner(System.in);
         BufferedReader buffer;
         FileReader filerR;
@@ -30,6 +32,9 @@ public class IES {
         } catch (Exception e) {
             System.out.println("ARQUIVO NÃO ENCONTRADO!!!!");
         }
+        
+        
+        
 
     }
 
@@ -103,6 +108,54 @@ public class IES {
         public void setTipo(String tipo) {
             this.tipo = tipo;
         }
+        
+        //metodo print
+        
+        public void printVoo(){
+        	System.out.println("Data:"+this.date+" Hora: "+this.hora+" Operação: "+this.matricula+" proced: "+this.origem+" destino: "+this.destino+" tipo: "this.tipo );
+        }
+
+    }
+    
+    public class voos {
+
+
+	LinkedList<voo> voos;
+	public voos() {
+            this.voos = new LinkedList<voo>()
+        }
+        
+        public void buscarMatricula(){
+        
+        }
+        
+        public void horarioDeMaiorVoo(){
+        
+        }
+        
+        public void addVoosInternacionais(){
+        
+        }
+        
+        public void companhiaComMaisVoosRegiao(){
+        
+        }
+        
+        private void buscarPorMAtricula(int matricula){
+        	if(voos == null){
+        		println("Não há voos adicionados")
+        	}else{
+        	
+        		Iterator i = voos.iterator(); //cria um objeto Iterator da sua LinkedList
+			while (i.hasNext()) { //percorrer toda a lista até o ultimo elemento
+				if(i.next.getMatricula().equals(matricula)){
+  					i.next.print();
+  				}
+			}
+        	}
+        }
+        
+	
 
     }
 
